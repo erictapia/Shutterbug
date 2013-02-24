@@ -16,8 +16,8 @@
 
 @implementation ImageViewController
 
-- (void)setImageUrl:(NSURL *)imageUrl {
-    _imageUrl = imageUrl;
+- (void)setImageURL:(NSURL *)imageURL {
+    _imageURL = imageURL;
     [self resetImage];
 }
 
@@ -26,7 +26,7 @@
         self.scrollView.contentSize = CGSizeZero;
         self.imageView.image = nil;
         
-        NSData *imageData = [[NSData alloc] initWithContentsOfURL:self.imageUrl];
+        NSData *imageData = [[NSData alloc] initWithContentsOfURL:self.imageURL];
         UIImage *image = [[UIImage alloc] initWithData:imageData];
         
         if (image) {

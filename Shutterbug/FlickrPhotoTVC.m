@@ -30,7 +30,7 @@
     if ([sender isKindOfClass:[UITableViewCell class]]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
         if (indexPath) {
-            if ([segue.identifier isEqualToString:@"Show Image"]) {
+            if ([segue.identifier isEqualToString:@"ShowImage"]) {
                 if ([segue.destinationViewController respondsToSelector:@selector(setImageURL:)]) {
                     NSURL *url = [FlickrFetcher urlForPhoto:self.photos[indexPath.row] format:FlickrPhotoFormatLarge];
                     [segue.destinationViewController performSelector:@selector(setImageURL:) withObject:url];
